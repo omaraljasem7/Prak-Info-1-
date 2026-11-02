@@ -1,0 +1,195 @@
+![Logo THM FB06](https://moodle.thm.de/pluginfile.php/1/core_admin/logocompact/300x300/1744840221/THM_Logo_moodle.png)
+
+Fachbereich MNI
+Prof. Dr. Uwe Meyer
+
+
+
+# Praktische Informatik – Übung 2
+
+
+In dieser Übung lernen Sie, wie aus einer Markdown-Datei eine echte Webseite wird – im Hintergrund entsteht dabei automatisch HTML. Sie kennen die Unterschiede zwischen Markdown und HTML und können in beide Richtungen übersetzen.
+
+---
+
+## ✅ Aufgabe 1: Markdown-Datei als HTML exportieren
+
+1. Öffnen Sie diese Datei (`exercise2.md`) in **Visual Studio Code**.
+2. Klicken Sie mit der **rechten Maustaste** irgendwo in die Datei.
+3. Wählen Sie im Kontextmenü:
+   ```
+   Markdown Preview Enhanced → Export (HTML) → HTML (offline)
+   ```
+4. Merken Sie sich, **wohin die HTML-Datei gespeichert wurde** (unter Windows ist dies meistens der Downloads-Order). Der Dateiname ist z. B. `exercise2.html`.
+5. Starten Sie einen Browser (z. B. **Chrome** oder **Firefox**).
+6. Drücken Sie im Browser die Taste **Strg+O** (oder `Cmd+O` auf dem Mac), um eine Datei zu öffnen.
+7. Wählen Sie die exportierte HTML-Datei aus.
+
+❓ **Was sehen Sie? Kommt Ihnen der Inhalt bekannt vor?**
+
+---
+
+### 🧠 Aufgabe 1b: Was passiert im Hintergrund?
+
+Versuchen Sie in eigenen Worten zu erklären:
+
+- Was passiert beim Export einer Markdown-Datei als HTML?
+- Woher kommt der HTML-Code?
+- Warum ist es möglich, Markdown so einfach in HTML umzuwandeln?
+
+💡 **Tipp:** HTML besteht aus sogenannten **Tags**. Ein **Tag** ist ein Element in spitzen Klammern, das den Aufbau einer Webseite beschreibt. Zum Beispiel:
+
+```html
+<p>Das ist ein Absatz.</p>
+```
+
+Das `<p>`-Tag steht für „paragraph“ (Absatz).
+
+---
+
+## ✅ Aufgabe 2: HTML-Quelltext untersuchen
+
+1. Im geöffneten Browser-Fenster: **Rechtsklick** auf die Seite → **"Seitenquelltext anzeigen"** (oder `Strg+U`).
+2. Jetzt sehen Sie den vollständigen **HTML-Code**, der vom Markdown-Editor erzeugt wurde.
+
+---
+
+### 🔍 Aufgabe 2a: Tabellen analysieren
+
+In der letzten Woche haben Sie einen Stundenplan als **Tabelle in Markdown** erstellt – z. B. so:
+
+```markdown
+| Tag       | Fach           | Zeit        |
+|-----------|----------------|-------------|
+| Montag    | Mathematik     | 08:00–09:30 |
+| Dienstag  | Informatik     | 10:00–11:30 |
+| Mittwoch  | Englisch       | 12:00–13:30 |
+```
+
+1. Fügen Sie diese Tabelle in Ihre Markdown-Datei ein.
+2. Exportieren Sie die Datei wie in **Aufgabe 1**.
+3. Öffnen Sie den Quelltext im Browser (Strg+U).
+4. **Suchen Sie die Tabelle** im HTML-Code.
+
+🟢 **Fragen:**
+
+- Welche HTML-Tags können Sie in der Tabelle erkennen?
+- Zum Beispiel: `<table>`, `<tr>`, `<th>`, `<td>` – was bedeuten diese?
+
+🌐 **Aufgabe:** Recherchieren Sie online die Bedeutung dieser Tags und notieren Sie stichpunktartig, was jede dieser Abkürzungen bedeutet.
+
+---
+
+### 🤔 Aufgabe 2b: Worin unterscheidet sich HTML von Markdown?
+
+Überlegen Sie:
+
+- Was müssen Sie bei Markdown *nicht* angeben, was bei HTML notwendig ist?
+- Welche Sprache ist "technischer"?
+- Welche Sprache ist "einfacher" für den Einstieg?
+
+Notieren Sie einige Unterschiede zwischen Markdown und HTML in einer kleinen Liste oder Tabelle.
+
+---
+
+## 🎨 Aufgabe 3: HTML
+
+Hier gehen wir einen Schritt weiter und versuchen, HTML zu entschlüsseln.
+
+---
+
+### 🔍 Teil 1: Spickzettel-Vergleich
+
+**Markdown:**
+
+```markdown
+## Mein Rezept
+
+**Zutaten:**
+
+- 2 Eier  
+- 1 Tasse Mehl  
+- 1 Prise Salz
+
+[Mehr erfahren](https://rezeptseite.de)
+```
+
+**HTML:**
+
+```html
+<h2>Mein Rezept</h2>
+
+<p><strong>Zutaten:</strong></p>
+
+<ul>
+  <li>2 Eier</li>
+  <li>1 Tasse Mehl</li>
+  <li>1 Prise Salz</li>
+</ul>
+
+<p><a href="https://rezeptseite.de">Mehr erfahren</a></p>
+```
+
+🟢 **Frage:** Was fällt Ihnen beim Vergleich auf? Welche Markdown-Symbole entsprechen welchen HTML-Tags?
+
+---
+
+### ✂️ Teil 2: HTML entschlüsseln
+
+Was bedeutet folgender Ausschnitt?
+
+```html
+<h1>Mein Blog</h1>
+
+<p>Willkommen auf meiner Seite über <strong>Kaffee</strong> und <em>Musik</em>.</p>
+
+<ul>
+  <li><a href="beitrag1.html">Erster Beitrag</a></li>
+  <li><a href="beitrag2.html">Zweiter Beitrag</a></li>
+</ul>
+```
+
+🟢 **Fragen:**
+
+- Was könnten `<strong>`, `<em>`, `<ul>`, `<li>` und `<a>` bedeuten?
+- Schreiben Sie den Ausschnitt in Markdown zurück.
+
+---
+
+### ✏️ Teil 3: Übersetzung üben
+
+HTML-Ausschnitt:
+
+```html
+<h3>Meine Lieblingsfilme</h3>
+
+<ol>
+  <li>Inception</li>
+  <li>Arrival</li>
+  <li>Interstellar</li>
+</ol>
+
+<p><em>Science Fiction ist das Beste!</em></p>
+```
+
+✍️ **Aufgabe:** Schreiben Sie diesen Inhalt als Markdown.
+
+---
+
+### 💬 Abschlussreflexion
+
+- Wenn HTML eine Sprache ist, was sind ihre "Wörter"?
+- Welche Vorteile hat Markdown – und wann kommt man mit Markdown allein nicht weiter?
+
+## Aufgabe 4: HTML-Datei mit WebStorm öffnen
+
+    Installieren Sie WebStorm auf Ihrem Rechner. Eine Anleitung dazu finden Sie hier:
+    [WebStorm installieren – Anleitung](https://moodle.thm.de/mod/resource/view.php?id=542719)
+
+    Öffnen Sie in WebStorm die HTML-Datei, die Sie in Aufgabe 1 exportiert haben.
+
+    Untersuchen Sie den HTML-Code erneut:
+
+        Können Sie die gleichen Tags wiederfinden?
+
+        Wie hilft Ihnen die Entwicklungsumgebung beim Verstehen der Datei?

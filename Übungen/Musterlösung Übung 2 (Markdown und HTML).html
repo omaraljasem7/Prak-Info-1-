@@ -1,0 +1,183 @@
+# Musterlösung: Von Markdown zu HTML
+
+---
+
+## ✅ Aufgabe 1b: Was passiert im Hintergrund?
+
+Beim Exportieren einer Markdown-Datei als HTML erzeugt das Plugin automatisch eine Webseite. Es wandelt die Markdown-Syntax in standardisierte HTML-Tags um. Der HTML-Code wird dann in eine Datei geschrieben, die im Browser wie eine normale Webseite angezeigt werden kann.
+
+**Beispiel:**
+
+Markdown:
+```markdown
+## Überschrift
+
+Das ist ein *Text*.
+```
+
+HTML:
+```html
+<h2>Überschrift</h2>
+<p>Das ist ein <em>Text</em>.</p>
+```
+
+---
+
+## 🔍 Aufgabe 2a: HTML-Tabelle untersuchen
+
+### Tabelle in Markdown
+
+```markdown
+| Tag       | Fach       | Zeit        |
+|-----------|------------|-------------|
+| Montag    | Mathe      | 08:00–09:30 |
+| Dienstag  | Info       | 10:00–11:30 |
+```
+
+### In HTML umgewandelt:
+
+```html
+<table>
+  <thead>
+    <tr>
+      <th>Tag</th>
+      <th>Fach</th>
+      <th>Zeit</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Montag</td>
+      <td>Mathe</td>
+      <td>08:00–09:30</td>
+    </tr>
+    <tr>
+      <td>Dienstag</td>
+      <td>Info</td>
+      <td>10:00–11:30</td>
+    </tr>
+  </tbody>
+</table>
+```
+
+### Bedeutungen der Tags:
+
+- `<table>`: Start der Tabelle
+- `<thead>`: Kopfbereich der Tabelle
+- `<tr>`: Tabellenzeile („table row“)
+- `<th>`: Tabellenüberschrift („table heading“)
+- `<td>`: Tabellenzelle („table data“)
+- `<tbody>`: Körper der Tabelle (optional, meist automatisch ergänzt)
+
+---
+
+## 🤔 Aufgabe 2b: Unterschiede zwischen Markdown und HTML
+
+| Markdown                          | HTML                                 |
+|-----------------------------------|--------------------------------------|
+| Einfach zu lesen und schreiben    | Genauer und flexibler                |
+| Wenige Zeichen für Formatierung   | Viele verschiedene Tags notwendig    |
+| Fokus auf Inhalt                  | Fokus auf Struktur und Darstellung   |
+| Kein Styling möglich              | CSS und Layout möglich               |
+| Schnell und übersichtlich         | Technisch, dafür sehr mächtig        |
+
+---
+
+## 🎨 Aufgabe 3: HTML
+
+### Teil 1: Spickzettel-Vergleich
+
+| Markdown                          | HTML                                  |
+|-----------------------------------|---------------------------------------|
+| `## Mein Rezept`                 | `<h2>Mein Rezept</h2>`               |
+| `**Zutaten:**`                   | `<strong>Zutaten:</strong>`          |
+| `- 2 Eier`                       | `<li>2 Eier</li>`                    |
+| `[Mehr erfahren](link)`         | `<a href="link">Mehr erfahren</a>`   |
+
+---
+
+### Teil 2: HTML entschlüsseln
+
+HTML:
+
+```html
+<h1>Mein Blog</h1>
+<p>Willkommen auf meiner Seite über <strong>Kaffee</strong> und <em>Musik</em>.</p>
+<ul>
+  <li><a href="beitrag1.html">Erster Beitrag</a></li>
+  <li><a href="beitrag2.html">Zweiter Beitrag</a></li>
+</ul>
+```
+
+Markdown-Übersetzung:
+
+```markdown
+# Mein Blog
+
+Willkommen auf meiner Seite über **Kaffee** und *Musik*.
+
+- [Erster Beitrag](beitrag1.html)
+- [Zweiter Beitrag](beitrag2.html)
+```
+
+**Tags erklärt:**
+
+- `<h1>`: Hauptüberschrift
+- `<p>`: Absatz
+- `<strong>`: fett (betont)
+- `<em>`: kursiv (hervorgehoben)
+- `<ul>`: ungeordnete Liste
+- `<li>`: Listeneintrag
+- `<a href="">`: Link zu einer anderen Seite
+
+---
+
+### Teil 3: HTML → Markdown
+
+HTML:
+
+```html
+<h3>Meine Lieblingsfilme</h3>
+<ol>
+  <li>Inception</li>
+  <li>Arrival</li>
+  <li>Interstellar</li>
+</ol>
+<p><em>Science Fiction ist das Beste!</em></p>
+```
+
+Markdown-Version:
+
+```markdown
+### Meine Lieblingsfilme
+
+1. Inception  
+2. Arrival  
+3. Interstellar
+
+*Science Fiction ist das Beste!*
+```
+
+---
+
+## 💬 Abschlussreflexion (Beispielantworten)
+
+- HTML besteht aus Tags wie `<h1>`, `<p>`, `<li>` – das sind die „Wörter“ der Sprache.
+- Markdown ist einfacher für Texte, HTML ist flexibler für Webseiten.
+- Markdown reicht für einfache Inhalte, aber wenn man Kontrolle über Layout, Styling oder Verhalten braucht, braucht man HTML und CSS.
+
+## Aufgabe 4: HTML-Datei mit WebStorm öffnen
+
+Ja, in WebStorm sieht man den gleichen HTML-Code wie im exportierten File. Tags wie ```<html>, <head>, <body>, <h1>, <p>, <table>``` usw. sind gut lesbar.
+
+WebStorm bietet folgende Hilfestellungen:
+
+   - Syntax-Hervorhebung: Tags, Attribute und Inhalte werden farblich hervorgehoben.
+
+   - Einrückung & Struktur: Der Code ist automatisch eingerückt und damit besser strukturiert.
+
+   - Tooltips & Autovervollständigung: Beim Überfahren eines Tags mit der Maus ("Hovern") zeigt WebStorm Hinweise an, und beim Tippen werden passende HTML-Tags vorgeschlagen.
+
+   - Live-Vorschau: Man kann die HTML-Datei direkt in WebStorm rendern lassen (per Plugin oder integriertem Vorschaufenster).
+
+   - Fehlermeldungen: Ungültige oder vergessene Tags werden visuell markiert.
